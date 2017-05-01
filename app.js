@@ -7,6 +7,11 @@ let cookieParser = require('cookie-parser');
 let bodyParser = require('body-parser');
 
 /*----------------------------------------------------------------------
+# Require Global Middlewares
+----------------------------------------------------------------------*/
+let dashRedirect = require('./app/middlewares/dashRedirect');
+
+/*----------------------------------------------------------------------
 # Require Routes
 ----------------------------------------------------------------------*/
 let index = require('./app/routes/index');
@@ -29,6 +34,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+/*----------------------------------------------------------------------
+# Global Middlewares
+----------------------------------------------------------------------*/
+app.use(dashRedirect);
 
 /*----------------------------------------------------------------------
 # Use The Routes
