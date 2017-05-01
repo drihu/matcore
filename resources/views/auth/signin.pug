@@ -1,0 +1,15 @@
+extends ../layouts/layout
+
+block content
+  h1= title
+  if alert
+    p= alert
+  form(method='POST', action='/auth/signin')
+    div
+      label Username
+    input(type='text', name='username')
+    div
+      label Password
+    input(type='password', name='password')
+    div
+      button(type='submit') Sign In

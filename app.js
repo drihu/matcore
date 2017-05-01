@@ -15,6 +15,7 @@ let dashRedirect = require('./app/middlewares/dashRedirect');
 # Require Routes
 ----------------------------------------------------------------------*/
 let index = require('./app/routes/index');
+let auth = require('./app/routes/auth');
 let users = require('./app/routes/users');
 
 let app = express();
@@ -44,6 +45,7 @@ app.use(dashRedirect);
 # Use The Routes
 ----------------------------------------------------------------------*/
 app.use('/', index);
+app.use('/auth', auth);
 app.use('/users', users);
 
 // catch 404 and forward to error handler
