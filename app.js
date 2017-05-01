@@ -11,7 +11,7 @@ let users = require('./routes/users');
 
 let app = express();
 
-// set Environment Variables
+// environment variables
 app.set('env', process.env.APP_ENV || 'development');
 app.set('key', process.env.APP_KEY || 'secret');
 
