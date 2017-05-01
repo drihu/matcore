@@ -16,7 +16,7 @@ app.set('env', process.env.APP_ENV || 'development');
 app.set('key', process.env.APP_KEY || 'secret');
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'resources/views'));
 app.set('view engine', 'pug');
 
 // uncomment after placing your favicon in /public
