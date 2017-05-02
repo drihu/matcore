@@ -2,16 +2,20 @@
 let express = require('express');
 let router = express.Router();
 
+let authController = require('../controllers/auth/authController');
+
 /*----------------------------------------------------------------------
 # Authentication Routes
 ----------------------------------------------------------------------*/
-router.get('/signin', (req, res, next) => {
-  res.render('auth/signin', { title: 'Sign In' });
-});
+router.get('/signin', authController.viewSignIn);
 
-router.get('/signup', (req, res, next) => {
-  res.render('auth/signup', { title: 'Sign Up' });
-});
+router.post('/signin', authController.signIn);
+
+router.get('/signup', authController.viewSignUp);
+
+router.post('/signup', authController.signUp);
+
+router.get('/signout', authController.signOut);
 
 
 module.exports = router;

@@ -5,6 +5,7 @@ let favicon = require('serve-favicon');
 let logger = require('morgan');
 let cookieParser = require('cookie-parser');
 let bodyParser = require('body-parser');
+let mongoose = require('./config/mongoose');
 
 /*----------------------------------------------------------------------
 # Require Global Middlewares
@@ -16,6 +17,7 @@ let dashRedirect = require('./app/middlewares/dashRedirect');
 ----------------------------------------------------------------------*/
 let index = require('./app/routes/index');
 let auth = require('./app/routes/auth');
+let appli = require('./app/routes/app');
 let users = require('./app/routes/users');
 
 let app = express();
@@ -36,6 +38,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// configure and initialize Passport
+require('./config/passport')(app);
+require('./config/auth')(app);
+
 /*----------------------------------------------------------------------
 # Global Middlewares
 ----------------------------------------------------------------------*/
@@ -46,6 +52,7 @@ app.use(dashRedirect);
 ----------------------------------------------------------------------*/
 app.use('/', index);
 app.use('/auth', auth);
+app.use('/app', appli);
 app.use('/users', users);
 
 // catch 404 and forward to error handler

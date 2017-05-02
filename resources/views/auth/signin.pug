@@ -1,7 +1,7 @@
 extends ../layouts/layout
 
 block content
-  h1= title
+  h1 Sign In
   if alert
     p= alert
   form(method='POST', action='/auth/signin')
@@ -13,3 +13,5 @@ block content
     input(type='password', name='password')
     div
       button(type='submit') Sign In
+  div
+    a(href='/auth/signup') Create an account
