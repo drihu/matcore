@@ -1,6 +1,6 @@
 {
   "name": "drihup",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A simple skeleton application with Express and Pug",
   "private": true,
   "main": "bin/www",
