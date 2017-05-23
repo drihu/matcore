@@ -1,10 +1,8 @@
 'use strict';
 
-let config = {
-  views: {
-    signIn: 'auth/signin',
-    signUp: 'auth/signup',
-  }
+let views = {
+  signIn: 'auth/signin',
+  signUp: 'auth/signup',
 };
 
 let authConfig = function (app) {
@@ -12,7 +10,7 @@ let authConfig = function (app) {
     app.locals.config = {};
   }
 
-  app.locals.config.views = config.views;
+  app.locals.config.views = views;
 };
 
 
