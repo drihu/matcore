@@ -1,12 +1,11 @@
 'use strict';
 let jwt = require('jsonwebtoken');
-
 let User = require('../../models/user');
 
 let signIn = function (req, res, next) {
   let signInView = req.app.locals.config.views.signIn;
 
-  User.findOne({ email: req.body.email }, (err, user) => {
+  User.findOne({ email: req.body.email.toLowerCase() }, (err, user) => {
     if (user) {
       if (user.password === req.body.password) {
         let payload = {
