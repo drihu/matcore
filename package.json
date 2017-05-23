@@ -2,7 +2,7 @@
   "name": "drihup",
   "version": "0.1.0",
   "description": "A simple skeleton application with Express and Pug",
-  "private": true,
+  "private": false,
   "main": "bin/www",
   "scripts": {
     "start": "node ./bin/www",
