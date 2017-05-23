@@ -8,7 +8,7 @@ let signUp = [
 
     if (username.length < 6) {
       let alert = 'Your username must be at least six characters.';
-      res.render(signUpView, { title: 'Sign Up', alert: alert });
+      res.render(signUpView, { title: 'Sign Up', alert });
 
     } else {
       next();
@@ -24,7 +24,7 @@ let signUp = [
     User.findOne({ username: req.body.username }, (err, user) => {
       if (user) {
         let alert = 'That user already exists.';
-        res.render(signUpView, { title: 'Sign Up',  alert: alert });
+        res.render(signUpView, { title: 'Sign Up', alert });
 
       } else {
         if (password === passwordAgain) {
@@ -36,11 +36,11 @@ let signUp = [
           user.save();
 
           let alert = 'Your user has been created.';
-          res.render(signUpView, { title: 'Sign Up', alert: alert });
+          res.render(signUpView, { title: 'Sign Up', alert });
 
         } else {
           let alert = 'Passwords do not match.';
-          res.render(signUpView, { title: 'Sign Up', alert: alert });
+          res.render(signUpView, { title: 'Sign Up', alert });
         }
       }
     });
