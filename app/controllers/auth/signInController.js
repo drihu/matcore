@@ -6,12 +6,12 @@ let User = require('../../models/user');
 let signIn = function (req, res, next) {
   let signInView = req.app.locals.config.views.signIn;
 
-  User.findOne({ username: req.body.username }, (err, user) => {
+  User.findOne({ email: req.body.email }, (err, user) => {
     if (user) {
       if (user.password === req.body.password) {
         let payload = {
           sub: user._id,
-          usr: user.username,
+          usr: user.email,
         };
 
         let token = jwt.sign(payload, process.env.APP_KEY, {
@@ -27,7 +27,7 @@ let signIn = function (req, res, next) {
           .concat('The password doesn\'t match the user')
           .concat(' or the account doesn\'t exist.');
 
-        res.render(signInView, { title: 'Sign In', alert: alert });
+        res.render(signInView, { title: 'Sign In', alert });
       }
 
     } else {
@@ -35,7 +35,7 @@ let signIn = function (req, res, next) {
         .concat('The password doesn\'t match the user')
         .concat(' or the account doesn\'t exist.');
 
-      res.render(signInView, { title: 'Sign In', alert: alert });
+      res.render(signInView, { title: 'Sign In', alert });
     }
   });
 };

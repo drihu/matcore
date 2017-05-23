@@ -3,11 +3,11 @@ let User = require('../../models/user');
 
 let signUp = [
   function (req, res, next) {
-    let username = req.body.username;
+    let email = req.body.email;
     let signUpView = req.app.locals.config.views.signUp;
 
-    if (username.length < 6) {
-      let alert = 'Your username must be at least six characters.';
+    if (email.length < 6) {
+      let alert = 'Your email must be at least six characters.';
       res.render(signUpView, { title: 'Sign Up', alert });
 
     } else {
@@ -16,12 +16,12 @@ let signUp = [
   },
 
   function (req, res, next) {
-    let username = req.body.username;
+    let email = req.body.email;
     let password = req.body.password;
     let passwordAgain = req.body.passwordAgain;
     let signUpView = req.app.locals.config.views.signUp;
 
-    User.findOne({ username: req.body.username }, (err, user) => {
+    User.findOne({ email: req.body.email }, (err, user) => {
       if (user) {
         let alert = 'That user already exists.';
         res.render(signUpView, { title: 'Sign Up', alert });
@@ -29,7 +29,7 @@ let signUp = [
       } else {
         if (password === passwordAgain) {
           let user = new User({
-            username: username,
+            email: email,
             password: password,
           });
 

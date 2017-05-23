@@ -2,7 +2,7 @@
 let mongoose = require('mongoose');
 
 let User = mongoose.model('User', mongoose.Schema({
-  username: {
+  email: {
     type: String,
     unique: true
   },
