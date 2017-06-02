@@ -18,7 +18,7 @@ const config = {
         use: { loader: 'babel-loader' }
       },
       {
-        test: /\.(.sass|scss)$/,
+        test: /\.(sass|scss)$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: [
