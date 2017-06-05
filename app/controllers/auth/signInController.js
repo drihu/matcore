@@ -6,6 +6,8 @@ let signIn = function (req, res, next) {
   let signInView = req.app.locals.config.views.signIn;
 
   User.findOne({ email: req.body.email.toLowerCase() }, (err, user) => {
+    if (err) throw err;
+
     if (user) {
       if (user.password === req.body.password) {
         let payload = {

@@ -26,6 +26,8 @@ let signUp = [
     let signUpView = req.app.locals.config.views.signUp;
 
     User.findOne({ email: email }, (err, user) => {
+      if (err) throw err;
+
       if (user) {
         let alert = 'That user already exists.';
         res.render(signUpView, { title: 'Sign Up', alert });
