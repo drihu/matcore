@@ -7,6 +7,8 @@
   "scripts": {
     "start": "node ./bin/www",
     "build": "webpack",
+    "eslint": "eslint",
+    "eslint:init": "eslint --init",
     "watch": "npm-run-all --parallel watch:*",
     "watch:app": "nodemon -L --ignore resources/assets --ignore public/assets ./bin/www",
     "watch:wp": "webpack --watch"
@@ -34,6 +36,11 @@
     "babel-preset-env": "^1.4.0",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.1",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.1",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-jsx-a11y": "^5.0.3",
+    "eslint-plugin-react": "^7.1.0",
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.11.1",
     "node-sass": "^4.5.2",
