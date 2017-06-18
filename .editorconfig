@@ -9,18 +9,15 @@ indent_style = space
 insert_final_newline = true
 trim_trailing_whitespace = true
 
-[*.php]
+[*.{php,py}]
 indent_size = 4
 
-[*.py]
-indent_size = 4
-
-[composer.json]
+[{.eslintrc.json,composer.json}]
 indent_size = 4
 
 [Makefile]
-indent_size = 4
 indent_style = tab
+tab_width = 4
 
 [*.md]
 trim_trailing_whitespace = false
