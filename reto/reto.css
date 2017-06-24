@@ -1,0 +1,66 @@
+body{
+	background-image:url(fondo.jpg); 
+	background-size: cover;
+	background-repeat: no-repeat;
+
+
+}
+div{width: 100%;
+
+
+}
+
+button{margin-right: 5px;
+float: right;
+width:120px;
+height:50px;  
+
+font-size:;}
+
+.logo{background-image: url(logo.png);
+	background-size: cover;
+	background-repeat:  no-repeat;
+	background-color: transparent;
+	height:300px; 
+	width:700px;
+	margin-left:300px;
+	margin-top: 40px;
+
+}
+.text-reto2{
+	text-align: center;
+	font-size: 1.2em;
+	color: white;
+}
+
+#f{
+	width: 100%;
+	margin-left:35%;
+	display: flex;
+	flex-direction: row;
+}
+
+.m{font-size:20px;
+	font-family:arial;
+	color:#fffbed;
+
+	width:200px;
+
+height:70px;
+background-color: #1bff6b;}
+
+input:hover{
+	background-color:  rgba(121, 210, 208, 0.8);
+
+
+}
+
+
+}
+	 
+
+
+}
+p{text-align: center;
+
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>reto</title>
+
+	
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<link href="https://file.myfontastic.com/YmJUfPpwy2GMnYpbPNqWHN/icons.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./css/estilo.css">
+	<link rel="stylesheet" type="text/css" href="reto.css">
+</head>
+<body>
+	<div class="cola-modal">
+    </div>
+<div>
+   <div></div>
+   <br>
+	<button type="button" class="btn btn-primary">login</button>
+	<button type="button" id="sign-up" class="btn btn-default">sing up</button>
+</div>
+<br>
+<br>
+<div class="logo">
+	
+</div>
+<br>
+<br>
+
+ <p class="text-reto2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+
+<br>
+<br>
+
+<form id="f">
+  <input type="button" name="facebook" value="ingresar facebook" class="m btn btn-primary" >
+  <input type="button" name="gmail" value="ingresar gmail"  class=" m btn btn-primary" >
+
+	
+</form>
+
+<script type="text/javascript">
+
+        
+      	$(document).ready(function(){
+
+      		var cont=0;
+          
+
+          $('#sign-up').click(1000,function(){
+          		
+          			var modal = '<div class="ventana-modal"><div class="contenedor-form"><h1>Bienvenido Maker</h1><form><div class="form-group"><label for="username" class="color-white">Username</label><input type="text" id="username" class="form-control" placeholder="Ingrese aqui"></div><div class="form-group"><label for="username" class="color-white">Email</label><input type="text" id="username" class="form-control" placeholder="Ingrese aqui"></div><div class="form-group"><label for="password" class="color-white">Password</label><input type="password" id="password" class="form-control" placeholder="Ingrese aqui"></div><div class="contenefor-button"><button class="btn btn-primary btn-width">Registrar</button><button type="submit" class="btn btn-danger btn-width">Salir</button></div></form></div></div>';
+      			$('.cola-modal').append(modal);
+
+      			cont =1;
+          		
+          		
+      			
+           		
+      		});
+
+          $('.contenedor-form').click(2000,function(e){
+
+          		alert("contenedor-form");
+          		
+          		if(cont==1){
+
+          			$(".ventana-modal").remove();
+          			cont=0;
+          		}
+          });
+
+
+      	});
+      </script>
+
+</body>
+</html>
