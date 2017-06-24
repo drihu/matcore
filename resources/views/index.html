@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>A,B</title>
+
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<link href="https://file.myfontastic.com/YmJUfPpwy2GMnYpbPNqWHN/icons.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./css/estilo.css">
+</head>
+<body>
+
+	<div class="cola-modal">
+    </div>
+
+	<header class="header">
+
+		<div class="header__login-singup">
+
+			<button class="btn btn-success" id="sign-up"><i class="icon-user-plus"></i>Sign up</button>
+			<button class="btn btn-warning" id="sign-in"><i class="icon-sign-in"></i>Login</button>
+
+		</div>
+
+		<nav class="header__logo">
+
+			<img src="./img/logo.png">
+		</nav>
+
+	</header>
+
+
+	<section class="main">
+
+		<div class="main__texto">
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.
+			</p>
+		</div>
+
+		<div class="main__face-gmail">
+			<h4 class="alinear-text">Conectate con</h4>
+
+			<div class="cont-but">
+
+				<button class="btn btn-primary"><i class="icon-facebook"></i>Ingresar</button>
+				<button class="btn btn-danger"><i class="icon-mail"></i>Gmail</button>
+
+			</div>
+		</div>
+	</section>
+
+
+	<script type="text/javascript">
+
+
+      	$(document).ready(function(){
+
+      		var cont=0;
+
+
+          $('#sign-up').click(1000,function(){
+
+          			var modal = '<div class="ventana-modal"><div class="contenedor-form"><h1>Bienvenido Maker</h1><form method="post" action="/auth/signup"><div class="form-group"><label for="username" class="color-white">Username</label><input name="username" type="text" id="username" class="form-control" placeholder="Ingrese aqui"></div><div class="form-group"><label for="username" class="color-white">Email</label><input name="email" type="email" id="username" class="form-control" placeholder="Ingrese aqui"></div><div class="form-group"><label for="password" class="color-white">Password</label><input name="password" type="password" id="password" class="form-control" placeholder="Ingrese aqui"></div><div class="contenefor-button"><button class="btn btn-primary btn-width">Registrar</button><button type="submit" class="btn btn-danger btn-width">Salir</button></div></form></div></div>';
+      			$('.cola-modal').append(modal);
+
+      		});
+
+          $('#sign-in').click(1000,function(){
+
+                var modal = '<div class="ventana-modal"><div class="contenedor-form"><h1>Login</h1><form method="post" action="/auth/signin"><div class="form-group"><label for="username" class="color-white">Email</label><input type="email" name="email" id="username" class="form-control" placeholder="Ingrese aqui"></div><div class="form-group"><label for="password" class="color-white">Password</label><input name="password" type="password" id="password" class="form-control" placeholder="Ingrese aqui"></div><div class="contenefor-button"><button class="btn btn-primary btn-width">Registrar</button><button type="submit" class="btn btn-danger btn-width">Salir</button></div></form></div></div>';
+            $('.cola-modal').append(modal);
+
+          });
+
+          $('.contenedor-form').click(2000,function(e){
+
+          		alert("contenedor-form");
+
+          		if(cont==1){
+
+          			$(".ventana-modal").remove();
+          			cont=0;
+          		}
+          });
+
+
+      	});
+      </script>
+</body>
+</html>

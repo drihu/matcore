@@ -6,7 +6,7 @@ let router = express.Router();
 # Web Routes
 ----------------------------------------------------------------------*/
 router.get('/', (req, res, next) => {
-  res.render('index', { title: 'Express' });
+  res.sendFile('/srv/www/matcore/resources/views/index.html');
 });
 
 
