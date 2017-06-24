@@ -8,7 +8,7 @@ let authenticate = require('../middlewares/authenticate');
 # Application Routes
 ----------------------------------------------------------------------*/
 router.get('/', authenticate, (req, res, next) => {
-  res.render('app', { title: 'You\'re logged in.' });
+  res.sendFile('/srv/www/matcore/resources/views/app.html');
 });
 
 
