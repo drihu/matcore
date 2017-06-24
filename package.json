@@ -1,7 +1,7 @@
 {
   "name": "drihup",
   "version": "0.1.0",
-  "description": "A simple skeleton application with Express, Passport, Mongoose, React and Pug",
+  "description": "A simple web app for Math Practicing",
   "private": false,
   "main": "bin/www",
   "scripts": {
