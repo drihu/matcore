@@ -1,19 +1,18 @@
 'use strict';
 require('dotenv').config({ path: __dirname + '/../../.env' });
 let mongoose = require('../../config/mongoose');
-let User = require('../../app/models/user');
+let Theme = require('../../app/models/theme');
 
-let user = new User({
-  username: 'drihup',
-  email: 'drihupp@gmail.com',
-  password: 'pass',
+let theme = new Theme({
+  name: 'Triángulos',
+  imageUrl: 'triangulos.jpg',
 });
 
-user.save((err) => {
+theme.save((err) => {
   if (err) {
     throw err;
   } else {
-    console.log('New added user');
+    console.log('New added theme');
   }
 
   process.exit();

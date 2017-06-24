@@ -17,8 +17,11 @@ let dashRedirect = require('./app/middlewares/dashRedirect');
 ----------------------------------------------------------------------*/
 let index = require('./app/routes/index');
 let auth = require('./app/routes/auth');
+
 let appli = require('./app/routes/app');
-let users = require('./app/routes/users');
+let users = require('./app/routes/api/users');
+let subjects = require('./app/routes/api/subjects');
+let randomProblem = require('./app/routes/api/randomProblem');
 
 let app = express();
 
@@ -53,7 +56,9 @@ app.use(dashRedirect);
 app.use('/', index);
 app.use('/auth', auth);
 app.use('/app', appli);
-app.use('/users', users);
+app.use('/api/users', users);
+app.use('/api/subjects', subjects);
+app.use('/api/randomProblem', randomProblem);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

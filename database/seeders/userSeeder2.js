@@ -4,8 +4,8 @@ let mongoose = require('../../config/mongoose');
 let User = require('../../app/models/user');
 
 let user = new User({
-  username: 'drihup',
-  email: 'drihupp@gmail.com',
+  username: 'gon',
+  email: 'ultragon@gmail.com',
   password: 'pass',
 });
 
