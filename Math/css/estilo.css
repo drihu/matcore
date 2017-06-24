@@ -1,0 +1,180 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	background-image: url("../img/fondo.jpg");
+}
+
+:root {
+	--primary-color: #3f51b5;
+
+}
+/*
+
+
+h1 {
+	color: var(--primary-color);
+}
+
+a {
+	color: var(--primary-color);
+}
+
+*/
+
+.header{
+	width: 90%;
+	margin:0 auto;
+	display: flex;
+	
+	flex-direction: column;
+}
+
+	.header__login-singup{
+		
+		padding: 10px;
+		display: flex;
+		height: 75px;
+
+		flex-flow: row-reverse wrap;
+	}
+
+	.header__logo{
+		width: 460px;
+		margin:0 auto;
+	}
+
+		.header__logo > img{
+			width: 450px;
+			height: 280px;
+			
+		}
+
+.btn{
+	width: 175px;
+	height: 50px;
+	margin: 0 10px 0 10px;
+	font-size: 20px;
+	font-weight: bold;
+	justify-content: center;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	transition:width 2s, height 3s;
+	
+}
+
+.btn:hover{
+	width: 178px;
+	height: 53px;
+}
+	.icon-facebook{
+		font-size:30px;
+		margin-right: 10px;
+	}
+
+	.icon-mail{
+		font-size:30px;
+		margin-right: 10px;
+	}
+
+	.icon-sign-in{
+			font-size:30px;
+		margin-right: 10px;
+
+	}
+
+	.icon-user-plus{
+		font-size:30px;
+		margin-right: 10px;		
+	}
+
+.main{
+	display: flex;
+	width: 95%;
+	flex-direction: column;
+	padding: 20px;
+	
+	margin: 0 auto;
+}
+
+	.main__texto{
+		width: 60%;
+		color: white;
+		font-weight: bold;
+		font-size: 1em;
+		margin: 5px auto 10px auto;
+	}
+
+	.main__face-gmail{
+
+		width: 420px;
+		line-height:100px;
+		
+		margin: 40px auto 0 auto	;
+	}
+
+
+
+
+/*******MODAL********/
+
+
+.ventana-modal{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	display: flex;
+	align-items: center;
+	top: 0;
+	background-color: rgba(0, 13, 0, 1);
+}
+
+	.contenedor-form{
+		width: 400px;
+		margin: 0 auto;
+		background-color: rgba(0, 13, 0, 0.1);
+	}
+		.contenedor-form > h1{
+			text-align: center;
+			color:white;
+			font-weight: bold;
+		}
+
+.color-white{
+	color: white;
+	font-weight: bold;
+}
+
+.alinear-text{
+	text-align: center;
+		color: white;
+	font-weight: bold;
+}
+
+.contenefor-button{
+	display: flex;
+	width: 100%;
+	height: 75px;
+	margin-top: 15px;
+	flex-wrap: wrap;
+}
+
+.btn-width{
+	width: 45%;
+}
+
+.cont-but{
+	margin:0 auto;
+
+	display: flex;
+	flex-direction: row;
+
+}
+
+button{
+	box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
